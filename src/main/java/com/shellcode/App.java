@@ -26,8 +26,12 @@ public class App
         log.warn("Warning debug");
         log.trace("Trace debug");
 
-        Unit celsius = new Unit("C", "Temperature.");
-        Unit pascal = new Unit("Pa", "One newton per square metre");
+        Unit celsius = new Unit("C", "Temperature is a physical quantity that expresses hot " +
+                "and cold. It is the manifestation of thermal energy, present in all matter, which is the source " +
+                "of the occurrence of heat, a flow of energy, when a body is in contact with another that is " +
+                "colder or hotter.");
+        Unit pascal = new Unit("Pa", "The unit, named after Blaise Pascal, is defined as one newton " +
+                "per square metre[1] and is equivalent to 10 barye (Ba) in the CGS system.");
 
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {

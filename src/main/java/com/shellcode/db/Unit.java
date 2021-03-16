@@ -17,7 +17,7 @@ public class Unit {
     @Column(name = "si_unit")
     private String unit;
 
-    @Column(name = "unit_desc")
+    @Column(name = "unit_desc", columnDefinition="TEXT")
     private String description;
 
     /**
