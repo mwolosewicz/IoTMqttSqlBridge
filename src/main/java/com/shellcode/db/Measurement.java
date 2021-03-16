@@ -1,4 +1,4 @@
-package com.shellcode.base;
+package com.shellcode.db;
 
 import java.sql.Timestamp;
 
@@ -9,6 +9,12 @@ public class Measurement {
     private Timestamp timestamp;
     private Double value;
     private Unit unit;
+
+    /**
+     * Default constructor.
+     */
+    public Measurement() {
+    }
 
     /**
      * Constructor.
