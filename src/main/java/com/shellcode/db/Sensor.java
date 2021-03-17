@@ -1,7 +1,9 @@
 package com.shellcode.db;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -23,13 +25,13 @@ public class Sensor {
     private String description;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Measurement> measurements;
+    private List<Measurement> measurements;
 
     /**
      * Constructor.
      */
     public Sensor() {
-        measurements = new HashSet<>();
+        measurements = new ArrayList<>();
     }
 
     /**
@@ -39,7 +41,7 @@ public class Sensor {
      * @param description is a description of the sensor.
      * @param measurements it's a list of measurements.
      */
-    public Sensor(long sensorNumber, String description, Set<Measurement> measurements) {
+    public Sensor(long sensorNumber, String description, List<Measurement> measurements) {
         this.sensorNumber = sensorNumber;
         this.description = description;
         this.measurements = measurements;
@@ -54,7 +56,7 @@ public class Sensor {
     public Sensor(long sensorNumber, String description) {
         this.sensorNumber = sensorNumber;
         this.description = description;
-        measurements = new HashSet<>();
+        measurements = new ArrayList<>();
     }
 
     public void addMeasurement(Measurement measurement) {
@@ -85,11 +87,11 @@ public class Sensor {
         this.description = description;
     }
 
-    public Set<Measurement> getMeasurements() {
+    public List<Measurement> getMeasurements() {
         return measurements;
     }
 
-    public void setMeasurements(Set<Measurement> measurements) {
+    public void setMeasurements(List<Measurement> measurements) {
         this.measurements = measurements;
     }
 }
