@@ -27,5 +27,6 @@
 
         <mapping class="com.shellcode.db.Unit" />
         <mapping class="com.shellcode.db.Measurement" />
+        <mapping class="com.shellcode.db.Sensor" />
     </session-factory>
 </hibernate-configuration>
