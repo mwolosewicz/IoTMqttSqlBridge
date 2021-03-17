@@ -26,5 +26,6 @@
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
 
         <mapping class="com.shellcode.db.Unit" />
+        <mapping class="com.shellcode.db.Measurement" />
     </session-factory>
 </hibernate-configuration>
